@@ -1,3 +1,5 @@
+
+// enum Role { ADMIN = 'ADMIN', READ_ONLY, AUTHOR = 200} you can also assign your own values
 const person :{
     name: string;
     age: number;
@@ -7,12 +9,13 @@ const person :{
     name: Maximilian;
     age: 30;
     hobbies: ['Sports', 'Cooking']
-    role: [2, 'author']
+    role: Role.ADMIN
 };
 
 person.role = [0, 'admin', 'user'];
 
 let favoriteActivities: string[];
+// let favoriteActivities: any[];
 favoriteActivities = ['Sports'];
 
 console.log(person.name);
