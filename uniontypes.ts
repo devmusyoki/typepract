@@ -1,7 +1,14 @@
-function combine(input1: number | string , input2: number){
+type Combinable = number | string
+type ConversionDescriptor = 'as-number' | 'as-text'
+
+function combine
+(input1: Combinable,
+input2: Combinable,
+resultConversation: ConversionDescriptor
+){
     let result;
 
-    if (typeof input1 === 'number' && typeof input2 === 'number') {
+    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversation === 'as-text') {
      
         result = input1 + input2;
     } else {
